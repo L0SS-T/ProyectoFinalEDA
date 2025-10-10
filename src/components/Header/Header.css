@@ -1,0 +1,93 @@
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFF;
+  height: 100px;
+  padding: 0 40px;
+  position: relative;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.contenedorLogo img {
+  height: 55px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-right: 50px;
+}
+
+.contenedorUsuario img, .contenedorCarrito img {
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-inline: 10px;
+}
+
+
+.contenedorBuscar {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+}
+
+.buscar {
+  width: 260px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 15px;
+  color: #333;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.buscar::placeholder {
+  color: #888;
+}
+
+.menu {
+  margin-left: 40px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  color: #807a64;
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover {
+  color: #08162f;
+}
+.menu a.active {
+  color: #08162f;
+  font-weight: 600;}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .contenedorBuscar {
+    margin: 10px 0;
+  }
+
+  .menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
