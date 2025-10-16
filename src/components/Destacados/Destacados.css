@@ -1,101 +1,121 @@
-
-.destacados {
-  padding: 60px 80px;
-  background-color: #fcfbfa;
-  color: white;
+.dest-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 96px 32px;
   text-align: center;
 }
 
-
-.destacados h2 {
-  font-size: 35px;
-  margin-bottom: 50px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #08162f;
+.dest-header {
+  margin-bottom: 4rem;
 }
 
-.colecciones {
+.dest-separator {
+  height: 2px;
+  width: 90px;
+  background-color: #d4af37;
+  margin: 0 auto 16px;
+}
+
+.dest-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.dest-subtitle {
+  color: #545454;
+  font-size: 16px;
+}
+
+.dest-cards {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 35px;
-
-}
-
-.coleccion-card {
-  background-color: #222;
-  box-shadow: #333;
-  border-radius: 14px;
-  width: 250px;
-  height: 340px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.3s ease; /* Chat: para la animacion/transicion mas smooth */
-}
-
-.coleccion-card:hover {
-  transform: translateY(-5px); /* Chat: para hacer que se eleve un poco al pasar mouse*/
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
-}
-
-.imagen-cuadro {
-  width: 100%;
-  height: 70%;
-  background-color: #333;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  overflow: hidden;
+  gap: 32px;
 }
 
-.imagen-cuadro img {
+.dest-card {
+  width: 100%;
+  max-width: 364px;
+  text-align: center;
+  position: relative;
+  background-color: #f9f9f9;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.dest-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px #1a1a1a;
+}
+
+.dest-img-container {
+  position: relative;
+  width: 100%;
+  height: 485px;
+}
+
+.dest-img-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.7s ease;
 }
 
-.info-card {
-  padding: 12px 15px 18px;
+.dest-card:hover .dest-img-container img {
+  transform: scale(1.1);
 }
 
-.info-card small {
-  display: block;
-  font-size: 12px;
-  color: #bbb;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-  font-weight: 500;
+.dest-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #777;
+  text-align: left;
+  padding-top: 35px;
+  padding-left: 25px;
 }
 
-.info-card h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0 0 5px;
+.dest-card-title {
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 8px;
 }
 
-.info-card p {
-  color: #ffb347;
-  font-weight: bold;
-  font-size: 14px;
+.dest-card-desc {
+  font-size: 15px;
+  color: #545454;
 }
 
+.dest-line {
+  height: 2px;
+  width: 0;
+  background-color: #d4af37;
+  margin-top: 16px;
+  transition: width 0.4s ease;
+}
 
-.boton-explorar {
-  margin-top: 50px;
-  background-color: #08162f;
+.dest-card:hover .dest-line {
+  width: 60px;
+}
+
+.dest-btn {
+  background-color: #c5a04a;
   color: white;
   border: none;
-  border-radius: 6px;
   padding: 10px 20px;
-  font-size: 14px;
-  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  width: fit-content;
+  margin-left: 20px;
+  margin-top: 35px;
+  font-family: "Poppins", sans-serif;
 }
 
-.boton-explorar:hover {
-  background-color: #bbb;
+.dest-btn:hover {
+  background-color: #c19b2e;
 }
-
-

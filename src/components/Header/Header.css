@@ -1,91 +1,163 @@
-
-header {
+/* Header principal */
+.header-main {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   background-color: #FFFF;
-  height: 100px;
   padding: 0 40px;
-  position: relative;
-  color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  height: 100px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.contenedorLogo img {
+/* Bloques */
+.header-left, .header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo */
+.header-logo img {
   height: 55px;
   cursor: pointer;
   transition: transform 0.2s ease;
-  margin-right: 50px;
+  margin-right: 30px;
 }
 
-.contenedorUsuario img, .contenedorCarrito img {
-  height: 30px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  margin-inline: 10px;
-}
-
-
-.contenedorBuscar {
-  flex: 1;
-  display: flex;
-  justify-content: right;
-}
-
-.buscar {
-  width: 260px;
-  padding: 10px 14px;
-  border: none;
-  border-radius: 6px;
-  background-color: #fff;
-  font-size: 15px;
-  color: #333;
-  outline: none;
-  font-family: "Poppins", sans-serif;
-}
-
-.buscar::placeholder {
-  color: #888;
-}
-
-.menu {
-  margin-left: 40px;
-}
-
-.menu ul {
+.header-menu ul {
   list-style: none;
   display: flex;
   gap: 50px;
   margin: 0;
   padding: 0;
+  align-items: center; 
 }
 
-.menu a {
+.header-menu a {
   color: #807a64;
   text-decoration: none;
   font-weight: 300;
   transition: color 0.2s ease;
 }
 
-.menu a:hover {
+.header-menu a:hover {
   color: #08162f;
 }
-.menu a.active {
-  color: #08162f;
-  font-weight: 600;}
 
+/* Buscar */
+.header-buscar {
+  margin-right: 20px;
+}
+.header-buscar input {
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #333;
+  background-color: #f9f9f9; /* mismo estilo de los cards */
+  width: 220px;
+  transition: box-shadow 0.2s ease;
+}
+
+.header-buscar input::placeholder {
+  color: #888;
+}
+
+.header-buscar input:focus {
+  box-shadow: 0 0 0 2px #c5a04a;
+}
+
+/* Usuario y Carrito */
+.header-usuario, .header-carrito {
+  position: relative;
+  margin-left: 10px;
+}
+
+.header-iconoUsuario, .header-carrito img {
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* Dropdown */
+.header-dropdownMenu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+  min-width: 150px;
+  animation: header-fadeIn 0.2s ease-in-out;
+  z-index: 100;
+}
+
+.header-dropdownMenu button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: "Poppins", sans-serif;
+}
+
+.header-dropdownMenu button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Botón Login */
+.header-botonLogin {
+  color: #807a64;
+  background: none;
+  border: 1px solid #807a64;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.header-botonLogin:hover {
+  background-color: #c5a04a;
+  color: white;
+}
+
+/* Animación fade */
+@keyframes header-fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  header {
+  .header-main {
     flex-direction: column;
     height: auto;
     padding: 15px;
   }
 
-  .contenedorBuscar {
+  .header-left, .header-right {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-buscar {
+    width: 100%;
     margin: 10px 0;
   }
 
-  .menu ul {
+  .header-menu ul {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;

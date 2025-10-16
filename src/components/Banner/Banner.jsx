@@ -1,16 +1,19 @@
 import './Banner.css'
 import collar from '../../assets/collar-main.jpg'
+import { useNavigate } from 'react-router-dom'
 
 const Banner = () => {
+
+  const navigate = useNavigate();
   return (
     <main>
       <div className="seccionTexto">
         <h2>Elegancia</h2>
         <h2>Elegancia</h2>
         <h2 id='letraGold'>Elegancia</h2>
-        <p>Discover exquisite jewelry that transcends trends. Each piece is a masterwork of artistry and precision.</p>
+        <p>Descubre joyas exquisitas que trascienden las tendencias. Cada pieza es una obra maestra de arte y precisión.</p>
 
-        <button>Comprar ahora </button>
+        <button onClick={() => navigate('/productos')}>Comprar ahora </button>
       </div>
 
       <div className='img1'>

@@ -7,14 +7,9 @@ const irInicio = () => {
     window.location.href = '/';
 };
 
-const irColecciones=()=>{
-    window.location.href= ''
-}
-
-
 const Footer = () => {
     return (
-        <footer> 
+        <footer className="footer-wrapper"> 
             <div className="unete">
                 <h2>Únete a nosotros</h2>
                 <p>Se el primero en descubrir nuestras nuevas colecciones y ofertas exclusivas</p>
@@ -34,10 +29,10 @@ const Footer = () => {
                 <div className='footer1'>
                     <h4>MENU</h4>
                     <ul>
-                        <li>Inicio</li>
-                        <li>Colecciones</li>
-                        <li>Oferas</li>
-                        <li>Acerca Nosotros</li>
+                        <li><a href="#" onClick={irInicio}>Inicio</a></li>
+                        <li><a href="/colecciones">Colecciones</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                        <li><a href="#">Acerca Nosotros</a></li>
                     </ul>
                 </div>
 
@@ -52,18 +47,17 @@ const Footer = () => {
                     </ul>
                 </div>
 
-
                 <div className='footer3'>
                     <h4>CONTACTANOS</h4>
                     <ul className="contact-info">
                         <li>Calle Palominmo, Galeria 1283</li>
                         <li>+51 999-999-999</li>
-                        <li>contact@adara.com</li>
+                        <li>contact@maricielosgold.com</li>
                     </ul>
                 </div>   
 
                 <div className="footer4">
-                    <h4>ADARA</h4>
+                    <h4>MARICIELO'S GOLD</h4>
                     <p>
                         Creando elegancia eterna a través de una maestría artesanal y un diseño 
                         excepcional desde hace más de 25 años.
@@ -84,8 +78,6 @@ const Footer = () => {
             <br />
             <hr />
 
-
-
             <div className="footer-end">
                 <p>© 2025 Joyeria Adara. All rights reserved.</p>
                 <div className="policies">
@@ -99,6 +91,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
-
-
+export default Footer;

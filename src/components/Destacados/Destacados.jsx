@@ -1,65 +1,57 @@
 import './Destacados.css'
 import pulsera1 from '../../assets/pulseras.jpg'
-import collar1 from '../../assets/collar1.jpg'
-import conjunto1 from '../../assets/conjunto.jpg'
+import collar2 from '../../assets/collar2.jpg'
 import anillo1 from '../../assets/anillo1.jpg'
+import { useNavigate } from 'react-router-dom'
 
-
-
-const featuredProducts = [
+const categories = [
   {
-    id: 1,
-    category: "Brazaletes",
-    name: "Elegance Bracelet",
-    price: "$25,000",
-    image: pulsera1,
-  },
-  {
-    id: 2,
-    category: "Necklaces",
-    name: "Golden Elegance Necklace",
-    price: "$15,000",
-    image: collar1,
-  },
-  {
-    id: 3,
-    category: "Conjuntos",
-    name: "Heritage Pearl Necklace",
-    price: "$12,000",
-    image: conjunto1,
-  },
-  {
-    id: 4,
-    category: "Anillos",
-    name: "Celestial Gold Chain",
-    price: "$2,400",
+    name: "Anillos",
     image: anillo1,
+    description: "Timeless symbols of elegance"
   },
+  {
+    name: "Collares",
+    image: collar2,
+    description: "Grace and sophistication"
+  },
+  {
+    name: "Pulseras",
+    image: pulsera1,
+    description: "Adorned wrist artistry"
+  }
 ];
 
 const Destacados = () => {
-  return (
-    
-    <section className="destacados">
-      <hr />
-      <h2>Los más destacados</h2>
 
-      <div className="colecciones">
-        {featuredProducts.map((product) => (
-          <div key={product.id} className="coleccion-card">
-            <div className="imagen-cuadro">
-              <img src={product.image} alt={product.name} />
+  const navigate = useNavigate();
+
+  return (
+    <section className="dest-section">
+
+      <div className="dest-header">
+        <div className="dest-separator"></div>
+        <h2 className="dest-title">Categorias destacadas</h2>
+        <p className="dest-subtitle">Explora nuestras categorias</p>
+      </div>
+
+      <div className="dest-cards">
+        {categories.map((category, index) => (
+          <div key={index} className="dest-card">
+            <div className="dest-img-container">
+              <img src={category.image} alt={category.name} />
+              <div className="dest-overlay"></div>
             </div>
-            <div className="info-card">
-              <small>{product.category}</small>
-              <h3>{product.name}</h3>
-              <p>{product.price}</p>
+            <div className="dest-info">
+              <h3 className="dest-card-title">{category.name}</h3>
+              <p className="dest-card-desc">{category.description}</p>
+              <div className="dest-line"></div>
             </div>
           </div>
         ))}
       </div>
 
-      <button className="boton-explorar">Explorar todos</button>
+      <button className="dest-btn" onClick={() => navigate('/colecciones')}>Explorar todas</button>
     </section>
   );
 };

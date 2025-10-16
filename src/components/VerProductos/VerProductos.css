@@ -1,0 +1,112 @@
+.productos-section {
+  padding: 2rem;
+  position: relative;
+}
+h3 {
+    margin-left: 10px;
+}
+.filtros-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex: 1;
+}
+
+.boton-categorias {
+  border: none;
+  font-weight: 600;
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: right;
+  font-family: "Poppins", sans-serif;
+}
+
+.boton-categorias:hover {
+  transform: scale(1.05);
+
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu-overlay {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 200px;
+  animation: fadeInUp 0.25s ease-in-out;
+}
+
+.checkbox-item {
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
+.select-orden {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0.7rem;
+  font-size: 0.95rem;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.producto-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 90%;
+}
+
+.producto-card:hover {
+  transform: translateY(-6px);
+}
+
+.producto-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;  
+}
+
+/* Animaciones */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,90 @@
+.carrito-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* ajustado */
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  gap: 10px; /* espacio entre imagen y contenido */
+}
+
+.carrito-item div {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.carrito-item .botones-item {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+  justify-content: flex-start; /* botones al inicio del div */
+}
+.carrito-contenido {
+  position: relative; /* <--- esto es nuevo */
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 520px;
+  max-width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.cerrar-x {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.cerrar-x:hover {
+  color: crimson;
+}
+
+
+.carrito-botones {
+  display: flex;
+  justify-content: flex-end; /* los botones principales a la derecha */
+  margin-top: 20px;
+  gap: 10px;
+}
+.carrito-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 10px; /* evita que se pegue a los bordes en pantallas pequeñas */
+  box-sizing: border-box;
+}
+
+.carrito-contenido {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 520px;
+  max-width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+}
